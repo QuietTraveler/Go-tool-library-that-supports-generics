@@ -1,8 +1,8 @@
 package slice
 
 import (
-	"basic-go/gtool/internal/errs"
 	"github.com/stretchr/testify/assert"
+	"gtool/internal/errs"
 	"testing"
 )
 
@@ -83,12 +83,12 @@ func TestDelete(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			res, target, err := Delete(tt.args.src, tt.args.index)
-			assert.Equal(t, err, tt.wantErr, "Delete() error: %v, wantErr: %v")
+			assert.Equal(t, err, tt.wantErr, "Delete() error: %v, wantErr: %v", err, tt.wantErr)
 			if err != nil {
 				return
 			}
-			assert.Equal(t, target, tt.wantTarget, "Delete() target: %v, want: %v")
-			assert.Equal(t, res, tt.want, "Add() res: %v, want: %v")
+			assert.Equal(t, target, tt.wantTarget, "Delete() target: %v, want: %v", target, tt.wantTarget)
+			assert.Equal(t, res, tt.want, "Add() res: %v, want: %v", res, tt.want)
 		})
 	}
 }

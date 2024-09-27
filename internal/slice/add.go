@@ -1,6 +1,6 @@
 package slice
 
-import "basic-go/gtool/internal/errs"
+import "gtool/internal/errs"
 
 func Add[T any](src []T, element T, index int) ([]T, error) {
 	//Boundary judgment

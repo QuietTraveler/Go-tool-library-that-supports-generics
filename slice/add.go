@@ -1,6 +1,6 @@
 package slice
 
-import "basic-go/gtool/internal/slice"
+import "gtool/internal/slice"
 
 // Add adds an element at index
 // The range of index should be [0,len(src)]

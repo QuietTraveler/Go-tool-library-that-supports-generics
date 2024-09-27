@@ -1,6 +1,6 @@
 package slice
 
-import "basic-go/gtool/internal/slice"
+import "gtool/internal/slice"
 
 // Delete the element at the specified index
 func Delete[T any](src []T, index int) ([]T, T, error) {

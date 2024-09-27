@@ -1,6 +1,6 @@
 package slice
 
-import "basic-go/gtool/internal/errs"
+import "gtool/internal/errs"
 
 func Delete[T any](src []T, index int) ([]T, T, error) {
 	length := len(src)

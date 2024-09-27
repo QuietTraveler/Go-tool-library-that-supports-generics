@@ -1,8 +1,8 @@
 package slice
 
 import (
-	"basic-go/gtool/internal/errs"
 	"github.com/stretchr/testify/assert" // testify
+	"gtool/internal/errs"
 	"testing"
 )
 
@@ -103,11 +103,11 @@ func TestAdd(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			res, err := Add(tt.args.src, tt.args.element, tt.args.index)
-			assert.Equal(t, tt.wantErr, err, "Add() error: %v, wantErr: %v")
+			assert.Equal(t, tt.wantErr, err, "Add() error: %v, wantErr: %v", err, tt.wantErr)
 			if err != nil {
 				return
 			}
-			assert.Equal(t, tt.want, res, "Add() want: %v, res: %v")
+			assert.Equal(t, tt.want, res, "Add() want: %v, res: %v", tt.want, res)
 		})
 	}
 }
